@@ -38,6 +38,10 @@ func EvmosAppOptions(chainID string) error {
 	id := strings.Split(chainID, "-")[0]
 	coinInfo, found := evmtypes.ChainsCoinInfo[id]
 	if !found {
+		fmt.Println("evmos_9001:", evmtypes.ChainsCoinInfo["evmos_9001"])
+		fmt.Println("evmos_9002:", evmtypes.ChainsCoinInfo["evmos_9002"])
+		fmt.Println("evmos_9000:", evmtypes.ChainsCoinInfo["evmos_9000"])
+		
 		return fmt.Errorf("unknown chain id found: %s",  evmtypes.ChainsCoinInfo)
 		//return fmt.Errorf("unknown chain id: %s", chainID)
 	}
