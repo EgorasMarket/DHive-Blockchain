@@ -205,9 +205,9 @@ func TestGetReceivedCoin(t *testing.T) {
 			"channel-0",
 			"transfer",
 			"channel-0",
-			"transfer/channel-0/aevmos",
+			"transfer/channel-0/dfuel",
 			"10",
-			sdk.Coin{Denom: "aevmos", Amount: math.NewInt(10)},
+			sdk.Coin{Denom: "dfuel", Amount: math.NewInt(10)},
 		},
 		{
 			"transfer 2x ibc wrapped coin to destination which is its source",
@@ -246,14 +246,14 @@ func TestGetSentCoin(t *testing.T) {
 		expCoin   sdk.Coin
 	}{
 		{
-			"get unwrapped aevmos coin",
+			"get unwrapped dfuel coin",
 			baseDenom,
 			"10",
 			sdk.Coin{Denom: baseDenom, Amount: math.NewInt(10)},
 		},
 		{
-			"get ibc wrapped aevmos coin",
-			"transfer/channel-0/aevmos",
+			"get ibc wrapped dfuel coin",
+			"transfer/channel-0/dfuel",
 			"10",
 			sdk.Coin{Denom: teststypes.AevmosIbcdenom, Amount: math.NewInt(10)},
 		},
@@ -314,7 +314,7 @@ func TestDeriveDecimalsFromDenom(t *testing.T) {
 		},
 		{
 			name:      "success: atto 'a' prefix",
-			baseDenom: "aevmos",
+			baseDenom: "dfuel",
 			expDec:    18,
 			expFail:   false,
 			expErrMsg: "",

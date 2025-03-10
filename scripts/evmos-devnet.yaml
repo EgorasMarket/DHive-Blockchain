@@ -3,7 +3,7 @@ evmos_9000-1:
   cmd: evmosd
   start-flags: "--trace"
   app-config:
-    minimum-gas-prices: 0aevmos
+    minimum-gas-prices: dfuel
     index-events:
       - ethereum_tx.ethereumTxHash
     json-rpc:
@@ -14,21 +14,21 @@ evmos_9000-1:
     api:
       enable: true    
   validators:
-    - coins: 10001000000000000000000aevmos
-      staked: 1000000000000000000aevmos
+    - coins: 10001000000000000000000dfuel
+      staked: 1000000000000000000dfuel
       mnemonic: ${VALIDATOR1_MNEMONIC}
-    - coins: 10001000000000000000000aevmos
-      staked: 1000000000000000000aevmos
+    - coins: 10001000000000000000000dfuel
+      staked: 1000000000000000000dfuel
       mnemonic: ${VALIDATOR2_MNEMONIC}
   accounts:
     - name: community
-      coins: 10000000000000000000000aevmos
+      coins: 10000000000000000000000dfuel
       mnemonic: ${COMMUNITY_MNEMONIC}
     - name: signer1
-      coins: 20000000000000000000000aevmos
+      coins: 20000000000000000000000dfuel
       mnemonic: ${SIGNER1_MNEMONIC}
     - name: signer2
-      coins: 30000000000000000000000aevmos
+      coins: 30000000000000000000000dfuel
       mnemonic: ${SIGNER2_MNEMONIC}
 
   genesis:
@@ -39,24 +39,24 @@ evmos_9000-1:
     app_state:
       crisis:
         constant_fee:
-          denom: aevmos          
+          denom: dfuel          
       staking:
         params:
-          bond_denom: aevmos      
+          bond_denom: dhive      
       inflation:
         params:
-          mint_denom: aevmos              
+          mint_denom: dfuel              
       gov:
         voting_params:
           voting_period: "10s"
         deposit_params:
           max_deposit_period: "10s"
           min_deposit:
-            - denom: aevmos
+            - denom: dfuel
               amount: "1"
         params:
           min_deposit:
-            - denom: aevmos
+            - denom: dfuel
               amount: "1"        
       transfer:
         params:

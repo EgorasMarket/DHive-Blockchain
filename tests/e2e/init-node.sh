@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CHAINID="${CHAIN_ID:-evmos_9002-1}"
-BASE_DENOM="aevmos"
+BASE_DENOM="dfuel"
 MONIKER="localtestnet"
 KEYRING="test"          # remember to change to other types of keyring like 'file' in-case exposing to outside world, otherwise your balance will be wiped quickly. The keyring test does not require private key to steal tokens from you
 KEYALGO="eth_secp256k1" #gitleaks:allow

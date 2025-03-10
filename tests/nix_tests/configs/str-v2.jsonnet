@@ -221,7 +221,7 @@ config {
         },
         gas_price: {
           price: 80000000000,
-          denom: 'aevmos',
+          denom: 'dfuel',
         },
         extension_options: [{
           type: 'ethermint_dynamic_fee',

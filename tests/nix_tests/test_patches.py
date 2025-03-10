@@ -186,13 +186,13 @@ def test_vesting_acc_schedule(evmos_cluster):
             "name": "fail - vesting account with negative amount",
             "funder": eth_to_bech32(ADDRS["validator"]),
             "address": eth_to_bech32(ADDRS["signer1"]),
-            "exp_err": "invalid decimal coin expression: -10000000000aevmos",
+            "exp_err": "invalid decimal coin expression: -1000000000dfuel",
             "lockup": {
                 "start_time": 1625204910,
                 "periods": [
                     {
                         "length_seconds": 2419200,
-                        "coins": "10000000000aevmos",
+                        "coins": "10000000000dfuel",
                     }
                 ],
             },
@@ -201,15 +201,15 @@ def test_vesting_acc_schedule(evmos_cluster):
                 "periods": [
                     {
                         "length_seconds": 2419200,
-                        "coins": "10000000000aevmos",
+                        "coins": "10000000000dfuel",
                     },
                     {
                         "length_seconds": 2419200,
-                        "coins": "10000000000aevmos",
+                        "coins": "10000000000dfuel",
                     },
                     {
                         "length_seconds": 2419200,
-                        "coins": "-10000000000aevmos",
+                        "coins": "-1000000000dfuel",
                     },
                 ],
             },
@@ -224,7 +224,7 @@ def test_vesting_acc_schedule(evmos_cluster):
                 "periods": [
                     {
                         "length_seconds": 2419200,
-                        "coins": "0aevmos",
+                        "coins": "0dfuel",
                     }
                 ],
             },
@@ -233,7 +233,7 @@ def test_vesting_acc_schedule(evmos_cluster):
                 "periods": [
                     {
                         "length_seconds": 2419200,
-                        "coins": "0aevmos",
+                        "coins": "0dfuel",
                     },
                 ],
             },
@@ -333,7 +333,7 @@ def test_unvested_token_delegation(evmos_cluster):
                 "periods": [
                     {
                         "length_seconds": 1675184400,
-                        "coins": "10000000000000000000aevmos",
+                        "coins": "10000000000000000000dfuel",
                     }
                 ],
             },
@@ -348,15 +348,15 @@ def test_unvested_token_delegation(evmos_cluster):
                     "periods": [
                         {
                             "length_seconds": 1675184400,
-                            "coins": "3000000000000000000aevmos",
+                            "coins": "3000000000000000000",
                         },
                         {
                             "length_seconds": 2419200,
-                            "coins": "3000000000000000000aevmos",
+                            "coins": "3000000000000000000dfuel",
                         },
                         {
                             "length_seconds": 2419200,
-                            "coins": "4000000000000000000aevmos",
+                            "coins": "4000000000000000000dfuel",
                         },
                     ],
                 },
@@ -388,7 +388,7 @@ def test_unvested_token_delegation(evmos_cluster):
     assert balances["locked"] == balances["unvested"]
 
     # try to delegate more than the allowed tokens
-    del_amt = "7000000000000000000aevmos"
+    del_amt = "7000000000000000000dfuel"
     validator_addr = cli.validators()[0]["operator_address"]
     tx = cli.delegate_amount(
         validator_addr,

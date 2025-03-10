@@ -49,10 +49,10 @@ func generateBankGenesisMetadata(chainID string) banktypes.Metadata {
 
 	return banktypes.Metadata{
 		Description: "The native EVM, governance and staking token of the Evmos mainnet",
-		Base:        "aevmos",
+		Base:        "dfuel",
 		DenomUnits: []*banktypes.DenomUnit{
 			{
-				Denom:    "aevmos",
+				Denom:    "dfuel",
 				Exponent: 0,
 			},
 			{

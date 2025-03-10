@@ -4,7 +4,7 @@
       "description": "The native staking and governance token of the Evmos chain",
       "denom_units": [
         {
-          "denom": "aevmos",
+          "denom": "dfuel",
           "exponent": 0
         },
         {
@@ -12,10 +12,10 @@
           "exponent": 18
         }
       ],
-      "base": "aevmos",
-      "display": "aevmos",
-      "name": "aevmos",
-      "symbol": "EVMOS"
+      "base": "dfuel",
+      "display": "dfuel",
+      "name": "dfuel",
+      "symbol": "dfuel"
     },
     {
       "description": "The native staking and governance token of the Osmosis chain",

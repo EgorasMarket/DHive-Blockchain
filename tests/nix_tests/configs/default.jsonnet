@@ -7,7 +7,7 @@
     'start-flags': '--trace',
     'app-config': {
       'app-db-backend': 'goleveldb',
-      'minimum-gas-prices': '0aevmos',
+      'minimum-gas-prices': '0dfuel',
       'index-events': ['ethereum_tx.ethereumTxHash'],
       'json-rpc': {
         address: '127.0.0.1:{EVMRPC_PORT}',
@@ -24,25 +24,25 @@
       }
     },
     validators: [{
-      coins: '10001000000000000000000aevmos',
-      staked: '1000000000000000000aevmos',
+      coins: '1000100000000000000000dfuel',
+      staked: '100000000000000000dfuel',
       mnemonic: '${VALIDATOR1_MNEMONIC}',
     }, {
-      coins: '10001000000000000000000aevmos',
-      staked: '1000000000000000000aevmos',
+      coins: '10001000000000000000000dfuel',
+      staked: '1000000000000000000dfuel',
       mnemonic: '${VALIDATOR2_MNEMONIC}',
     }],
     accounts: [{
       name: 'community',
-      coins: '10000000000000000000000aevmos',
+      coins: '10000000000000000000000dfuel',
       mnemonic: '${COMMUNITY_MNEMONIC}',
     }, {
       name: 'signer1',
-      coins: '20000000000000000000000aevmos',
+      coins: '20000000000000000000000dfuel',
       mnemonic: '${SIGNER1_MNEMONIC}',
     }, {
       name: 'signer2',
-      coins: '30000000000000000000000aevmos',
+      coins: '3000000000000000000000dfuel',
       mnemonic: '${SIGNER2_MNEMONIC}',
     }],
     genesis: {
@@ -55,12 +55,12 @@
       app_state: {
         staking: {
           params: {
-            bond_denom: 'aevmos',
+            bond_denom: 'dhive',
           },
         },
         inflation: {
           params: {
-            mint_denom: 'aevmos',
+            mint_denom: 'dfuel',
           },
         },
         gov: {
@@ -68,7 +68,7 @@
             max_deposit_period: '10s',
             min_deposit: [
               {
-                denom: 'aevmos',
+                denom: 'dfuel',
                 amount: '1',
               },
             ],
@@ -76,7 +76,7 @@
           params: {
             min_deposit: [
               {
-                denom: 'aevmos',
+                denom: 'dfuel',
                 amount: '1',
               },
             ],

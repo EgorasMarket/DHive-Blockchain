@@ -88,7 +88,7 @@ func getProposalCmd(legacy ProposalVersion, targetVersion string, upgradeHeight 
 
 	cmd = append(cmd,
 		"--title=\"TEST\"",
-		"--deposit=10000000aevmos",
+		"--deposit=10000000dfuel",
 		"--description=\"Test upgrade proposal\"",
 		fmt.Sprintf("--upgrade-height=%d", upgradeHeight),
 		fmt.Sprintf("--chain-id=%s", chainID),
@@ -109,13 +109,13 @@ func (m *Manager) CreateDepositProposalExec(chainID string, id int) (string, err
 		"gov",
 		"deposit",
 		fmt.Sprint(id),
-		"10000000aevmos",
+		"10000000dfuel",
 		"--from=mykey",
 		fmt.Sprintf("--chain-id=%s", chainID),
 		"--yes",
 		"--keyring-backend=test",
 		"--output=text",
-		"--fees=500aevmos",
+		"--fees=500dfuel",
 		"--gas=500000",
 	}
 

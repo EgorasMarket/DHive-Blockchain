@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CHAINID="${CHAIN_ID:-evmos_9002-1}"
-BASE_DENOM="aevmos"
+BASE_DENOM="dfuel"
 MONIKER="localtestnet"
 # Remember to change to other types of keyring like 'file' in-case exposing to outside world,
 # otherwise your balance will be wiped quickly
@@ -10,7 +10,7 @@ KEYRING="test"
 KEYALGO="eth_secp256k1"
 LOGLEVEL="info"
 # Set dedicated home directory for the evmosd instance
-HOMEDIR="$HOME/.tmp-evmosd"
+HOMEDIR="$HOME/.tmp-dhived"
 # to trace evm
 #TRACE="--trace"
 TRACE=""
